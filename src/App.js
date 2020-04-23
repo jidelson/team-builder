@@ -22,7 +22,7 @@ const initialMemberList = [
 {
   name: "Danny Fischer",
   email: 'danfish@gmail.com',
-  role: 'backend engineer'
+  role: 'Backend Engineer'
 }
 ];
 
@@ -42,13 +42,17 @@ const onInputChange = evt => {
 }
  
 const onSubmit = evt => {
+
   evt.preventDefault()
+
   const newTeamMember = {
     name: formValues.name,
     email: formValues.email,
-    role: formValues
+    role: formValues.role
   }
+
 setTeamList([...teamList, newTeamMember])
+
 setFormValues(initialFormValues)
 
 }
@@ -65,8 +69,12 @@ setFormValues(initialFormValues)
     )
   })
 }
-        <TeamForm />
-      <Member />
+        <TeamForm
+        values = {formValues}
+        onInputChange = {onInputChange}
+        onSubmit = {onSubmit}
+        />
+      
     </div>
   );
 }

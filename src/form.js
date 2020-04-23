@@ -13,8 +13,8 @@ function TeamForm(props){
             
             <label>Name:&nbsp;
                 <input
-                // value = {values.name}
-                // onChange = {onInputChange}
+                value = {values.name}
+                onChange = {onInputChange}
                 name='name'
                 type='text'
                 />
@@ -22,8 +22,8 @@ function TeamForm(props){
 
             <label>Email:&nbsp;
                <input 
-                // value = {values.email}
-                // onChange = {onInputChange}
+                value = {values.email}
+                onChange = {onInputChange}
                name='email'
                type='text' 
                />
@@ -31,8 +31,8 @@ function TeamForm(props){
 
             <label>Role:&nbsp;
                <input 
-                // value = {values.role}
-                // onChange = {onInputChange}
+                value = {values.role}
+                onChange = {onInputChange}
                name='role'
                type='text' 
                />
