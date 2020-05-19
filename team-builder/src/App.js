@@ -26,13 +26,18 @@ const initialFormValues = {
 function App() {
   const [member, setMember] = useState(initialTeamList)  
   const [formValues, setFormValues] = useState(initialFormValues)
+  const [memberToEdit, setMemberToEdit] = useState(formValues)
+
+  const onEdit = evt => {
+    
+  }
 
   const onInputChange = evt => {
     const name = evt.target.name
     const value = evt.target.value
     setFormValues({...formValues, [name]:value})
   }
-
+ 
 
   const onSubmit = evt => {
     evt.preventDefault()
@@ -52,8 +57,10 @@ function App() {
       values={formValues}
       onInputChange={onInputChange}
       onSubmit={onSubmit}
+      onEdit={onEdit}
       />
 
+      <h1>Team List</h1>
       {
         member.map(member => {
           return (

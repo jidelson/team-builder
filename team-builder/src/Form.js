@@ -4,7 +4,8 @@ function Form(props) {
     const {
         values,
         onInputChange,
-        onSubmit
+        onSubmit,
+        onEdit
     } = props
 
 
@@ -21,7 +22,7 @@ return (
                 maxLength='100'
                 name='name'
                 value={values.name}
-                onInput={onInputChange}
+                onChange={onInputChange}
                 />
             </label>
 
@@ -33,13 +34,13 @@ return (
                 maxLength='50'
                 name='email'
                 value={values.email}
-                onInput={onInputChange}
+                onChange={onInputChange}
                 />
             </label>
 
             <label>
                 Role:&nbsp;
-               <select name='role' value={values.role} onInput={onInputChange}>
+               <select name='role' value={values.role} onChange={onInputChange}>
                     <option value=''>Select a Role</option>
                     <option value='Front End Developer'>Front End Developer</option>
                     <option value='Back End Developer'>Back End Developer</option>
@@ -49,6 +50,10 @@ return (
 
         <div>
             <button onClick={onSubmit}>Submit</button>
+        </div>
+
+        <div>
+        <button>Edit</button>
         </div>
 
     </form>
