@@ -39,16 +39,16 @@ return (
 
             <label>
                 Role:&nbsp;
-                <input 
-                type='text'
-                placeholder='Type your role here'
-                maxLength='20'
-                name='role'
-                value={values.role}
-                onInputChange={onInputChange}
-                />
+               <select name='role' value={values.role} onInput={onInputChange}>
+                    <option value=''>Select a Role</option>
+                    <option value='Front End Developer'>Front End Developer</option>
+                    <option value='Back End Developer'>Back End Developer</option>
+               </select>
             </label>
+        </div>
 
+        <div>
+            <button onClick={onSubmit}>Submit</button>
         </div>
 
     </form>

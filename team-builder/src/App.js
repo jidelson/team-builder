@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
-import Form from './Form'
+import Form from './Form';
+import Member from './Member';
 
 const initialTeamList = [
   {
@@ -52,6 +53,14 @@ function App() {
       onInputChange={onInputChange}
       onSubmit={onSubmit}
       />
+
+      {
+        member.map(member => {
+          return (
+            <Member key={member.name} details={member} />
+          )
+        })
+      }
     </div>
   );
 }
